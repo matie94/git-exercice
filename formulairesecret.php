@@ -15,9 +15,7 @@
         		<input type="password" name="password">
         		<input type="submit" value="Valider">
         	</form>   
-        	<p class="presentation"> <h1> Site de la NASA </h1><br>
-	        	Site de la nullité acceptée sans apprentissage.<br><br><br><br>
-	        	
+        	
 	        	<?php 
 	            
 	                if (isset($_POST['password']) AND $_POST['password'] ==  "Guigui")
@@ -26,6 +24,6 @@
 	             	else
 	                {echo "<p>Le code entré est incorrect. Veuillez vérifier vos droits pour accèder à ce site</p>";}
 	            ?>
-	         </p>
+	        
         </body>
     </html>
