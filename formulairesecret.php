@@ -11,18 +11,22 @@
         		Site de la nullité acceptée sans apprentissage.<br><br><br><br>
        			 Vous vous apprétez à rentrer sur un site ultra protégé... par un mot de passe!</p>
 
-        	<form method="post" action="secret.php">
-        		<input type="password" name="password">
-        		<input type="submit" value="Valider">
-        	</form>   
+        	  
         	
 	        	<?php 
 	            
-	                if (isset($_POST['password']) AND $_POST['password'] ==  "Guigui")
-	                  {echo "Bravo! La folie est acceptée";} 
+	                if (!isset($_POST['mot_de_passe']) OR $_POST['mot_de_passe'] != "kangourou")
+	                  { <form id="formulaire" method="post" action="secret.php">
+        				<input type="password" name="password">
+        				<input type="submit" value="Valider">
+        				</form> } 
 	                    
 	             	else
-	                {echo "<p>Le code entré est incorrect. Veuillez vérifier vos droits pour accèder à ce site</p>";}
+	                {echo "<p>Bravo! La folie est acceptée. Voici le code d'accés 457589215349</p>";}
+
+	            	elseif (isset($_POST['mot_de_passe']) AND $_POST['mot_de_passe'] != "kangourou") {
+	            		echo: Vous être pas si fou. Ou alors vérifiez votre mot de passe.
+	            	}
 	            ?>
 	        
         </body>
